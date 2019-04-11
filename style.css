@@ -1,0 +1,117 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas:    'navbar navbar navbar navbar'
+                            'section section aside aside'
+                            'footer footer footer footer';
+    grid-template-rows: 10vh 70vh 20vh;
+                        
+}
+
+nav{
+    grid-area: navbar;
+    background-color: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 16pt;
+}
+
+#menuHamburguer{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.trace{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 40px;
+}
+
+section{
+    grid-area: section;
+    background-color: orangered;
+}
+
+aside{
+    grid-area: aside;
+    background-color: yellow;
+}
+
+footer{
+    grid-area: footer;
+    background-color: darkmagenta;
+}
+
+@media(max-width:768px){
+    body{
+        grid-template-areas:    'navbar navbar navbar aside'
+                                'section section section aside'
+                                'footer footer footer aside';
+        grid-template-rows: 10vh 70vh 20vh;
+    }
+
+    nav{
+        background-color: black;
+    }
+
+
+    #menuHamburguer{
+        display: flex;
+        border-color: white;
+    }
+
+    .trace{
+        background-color: white;
+    }
+
+    nav a{
+        display: none;
+    }
+
+}
+
+@media (max-width:425px){
+    body{
+        
+        grid-template-areas:    'navbar navbar navbar navbar'
+                                'section section section section'
+                                'aside aside aside aside'
+                                'footer footer footer footer';
+        grid-template-rows: 10vh 100vh 100vh 35vh;
+    }
+    nav{
+        background-color: darkorange;
+    }
+    section{
+        background-color: purple;
+    }
+    aside{
+        background-color: greenyellow;
+    }
+    footer{
+        background-color: aquamarine;
+    }
+    nav{
+        justify-content: flex-start;
+    }
+    #menuHamburguer{
+        margin-left: 10px;
+        border-color: red;
+    }
+    .trace{
+        background-color: red;
+    }
+}
