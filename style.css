@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Dokdo');
+
 body{
     margin: 0;
     display: grid;
@@ -5,12 +7,12 @@ body{
                             'section section aside aside'
                             'footer footer footer footer';
     grid-template-rows: 10vh 70vh 20vh;
-                        
+    grid-template-columns: 24.7vw 24.7vw 24.7vw 24.7vw;
 }
 
 nav{
     grid-area: navbar;
-    background-color: green;
+    background-color: rgb(204, 0, 255);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,6 +22,11 @@ nav a{
     color: white;
     text-decoration: none;
     font-size: 16pt;
+}
+
+nav a:hover{
+    color: yellowgreen;
+    text-decoration: underline;
 }
 
 #menuHamburguer{
@@ -43,17 +50,78 @@ nav a{
 section{
     grid-area: section;
     background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section h1{
+    color: white;
+    font-size: 25pt;
+    font-family: 'Dokdo', cursive;
+}
+
+section img{
+
+    border-radius: 100%;
 }
 
 aside{
     grid-area: aside;
-    background-color: yellow;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: orange;
+}
+
+aside p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14pt;
+
 }
 
 footer{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
     grid-area: footer;
-    background-color: darkmagenta;
+    background-color: rgb(153, 255, 0);
 }
+
+#redesSociais{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#redesSociais img{
+    height: 50px;
+    padding: 10px;
+}
+
+#ajudeNicolas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ajudeNicolas a{
+    color: white;
+    text-decoration: none;
+    font-size: 12pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
 
 @media(max-width:768px){
     body{
@@ -61,6 +129,7 @@ footer{
                                 'section section section aside'
                                 'footer footer footer aside';
         grid-template-rows: 10vh 70vh 20vh;
+        grid-template-columns: 24.7vw 24.7vw 24.7vw 24.7vw;
     }
 
     nav{
@@ -103,6 +172,8 @@ footer{
     }
     footer{
         background-color: aquamarine;
+        flex-direction: column;
+        justify-content: space-between;
     }
     nav{
         justify-content: flex-start;
